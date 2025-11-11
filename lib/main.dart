@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:worker_getx/homepage.dart';
+import 'package:worker_getx/Presentation/View/homepage.dart';
 
 void main(){
   runApp(WorkerGetxApp());

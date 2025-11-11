@@ -33,8 +33,38 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget tabLogin(int index) {
-    return Center(
-      child: Text(index == 0 ? "Form Đăng Nhập ở đây" : "Form Đăng Ký ở đây"),
+    return Column(
+      children: [
+        TextField(
+          decoration: InputDecoration(
+            hintText: "Email",
+            border: OutlineInputBorder(),
+          ),
+        ),
+        SizedBox(height: 10),
+        TextField(
+          decoration: InputDecoration(
+            hintText: "Mật Khẩu",
+            border: OutlineInputBorder(),
+          ),
+          obscureText: true,
+        ),
+
+        index == 1 ? TextField(
+          decoration: InputDecoration(
+            hintText: "Họ tên đầy đủ",
+            border: OutlineInputBorder(),
+          ),
+          obscureText: true,
+        ) : Container(),
+
+        SizedBox(height: 10),
+        ElevatedButton(
+          onPressed: () {
+          },
+          child: Text(index == 0 ? "Đăng Nhập" : "Đăng Ký"),
+        ),
+      ],
     );
   }
 }
